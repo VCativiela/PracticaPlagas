@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace PracticaPlagasTest
@@ -9,8 +11,13 @@ namespace PracticaPlagasTest
         [TestMethod]
         public void TestCantidadPeones()
         {
-            int numeroPeones = 3;
-            Assert.IsTrue(numeroPeones <= 3 && numeroPeones > 0);
+            var peones = new List<string>
+            {
+                "Peon 1",
+                "Peon 2",
+                "Peon 3",
+            };
+            Assert.AreEqual(peones.Count(), 3);
         }
     }
 }

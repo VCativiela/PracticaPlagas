@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.9.4.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.9.4\lib\net45\Autofac.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,11 +46,45 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dominio\DomainEntities\Clases\Cliente.cs" />
+    <Compile Include="Dominio\DomainEntities\Clases\Empresa.cs" />
+    <Compile Include="Dominio\DomainEntities\Clases\Encargo.cs" />
+    <Compile Include="Dominio\DomainEntities\Clases\Factura.cs" />
+    <Compile Include="Dominio\DomainEntities\Clases\Gerente.cs" />
+    <Compile Include="Dominio\DomainEntities\Clases\Veneno.cs" />
+    <Compile Include="Dominio\DomainEntities\Interfaces\IEncargo.cs" />
+    <Compile Include="Dominio\DomainEntities\Interfaces\IFactura.cs" />
+    <Compile Include="Dominio\DomainEntities\Interfaces\IGerente.cs" />
+    <Compile Include="Dominio\DomainEntities\Interfaces\IPeon.cs" />
+    <Compile Include="Dominio\DomainEntities\Interfaces\IRecurso.cs" />
+    <Compile Include="Dominio\DomainEntities\Clases\Recurso.cs" />
+    <Compile Include="Dominio\DomainEntities\Interfaces\IEmpresa.cs" />
+    <Compile Include="Dominio\DomainEntities\Interfaces\IServicio.cs" />
+    <Compile Include="Dominio\DomainEntities\Interfaces\ICliente.cs" />
+    <Compile Include="Dominio\DomainEntities\Clases\Servicio.cs" />
+    <Compile Include="Dominio\DomainEntities\Interfaces\IEmpleado.cs" />
+    <Compile Include="Dominio\DomainEntities\Interfaces\IVeneno.cs" />
+    <Compile Include="Dominio\DomainService\Clases\BeneficioPorServicio.cs" />
+    <Compile Include="Dominio\DomainService\Clases\CalculadoraCuentasEmpresa.cs" />
+    <Compile Include="Dominio\DomainService\Clases\GeneradorFacturas.cs" />
+    <Compile Include="Dominio\DomainService\Factorias\EmpresaFactory.cs" />
+    <Compile Include="Dominio\DomainService\Factorias\EncargoFactory.cs" />
+    <Compile Include="Dominio\DomainService\Factorias\ServicioFactory.cs" />
+    <Compile Include="Dominio\DomainService\Interfaces\IBeneficioServicio.cs" />
+    <Compile Include="Dominio\DomainService\Interfaces\ICalculadoraCuentasEmpresa.cs" />
+    <Compile Include="Dominio\DomainService\Interfaces\ICalculadoraSalarios.cs" />
+    <Compile Include="Dominio\DomainService\Interfaces\IGeneradorFacturas.cs" />
+    <Compile Include="Dominio\RepositoryInterfaces\IRepository.cs" />
+    <Compile Include="InfraestructuraDePersistencia\Repositorios\FakeRepository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Presentacion\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

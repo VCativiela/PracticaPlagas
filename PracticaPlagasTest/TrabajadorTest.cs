@@ -7,8 +7,10 @@ namespace PracticaPlagasTest
     public class TrabajadorTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestSalarioPositivo()
         {
+            var salario = -10.0M;
+            Assert.IsTrue(salario >= 0.0M);
         }
     }
 }
